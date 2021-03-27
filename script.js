@@ -50,10 +50,10 @@ const intensityColors = {
   '2-3': '#ff8181',
   2: '#ffac00',
   '1-2': '#ffd680',
-  1: '#feff00',
-  '0-1': '#d8ff9c',
+  1: '#e6e600',
+  '0-1': '#d6ff99',
   0: '#35bc23',
-  '-1': '#fffff'
+  '-1': '#9e0000'
 }
 /*
 const intensityLabel = {
@@ -71,15 +71,15 @@ const intensityLabel = {
 const intensityLabel = {
   3: 'sehr viel',
   '2-3': 'mittel bis viel',
-  2: 'mittlere Belastung',
+  2: 'mittl',
   '1-2': 'geringe bis mittel',
-  1: 'geringe Belastung',
+  1: 'gering',
   '0-1': 'nix bis wenig',
-  0: 'keine Belastung',
+  0: 'nix',
   '-1': 'keine Daten'
 }
 
-let regionId = 120
+let regionId = 123
 let pollenType 
 
 if (args.widgetParameter) {
@@ -163,7 +163,7 @@ function createSmallWidget(widget) {
     const pollenInfoStackColumn = pollenInfoStackRow.addStack()
     pollenInfoStackColumn.layoutVertically()
     const pollenTypeText = pollenInfoStackColumn.addText(pollenType)
-    pollenTypeText.textColor = Color.gray()
+    pollenTypeText.textColor = Color.dimgray()
     pollenTypeText.font = Font.mediumSystemFont(10)
 
     const intensity = regionPollenInfo[pollenType][pollenInfoDayLabel]
